@@ -14,12 +14,21 @@ var toDo = [String]()
 class FirstViewController: UIViewController, UITableViewDelegate {
     
     
+    
+    
     @IBOutlet var toDoTable: UITableView!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // this chunk is used for permanent storage. use the global variable name as the objectForKey and use the if statement to let the app know whether or not the user has already added items to list that have been saved
+        if NSUserDefaults.standardUserDefaults().objectForKey("toDo") != nil {
+        
+        // use as! [String] so the app knows that what it is saving is definitely an array of strings
+        toDo = NSUserDefaults.standardUserDefaults().objectForKey("toDo") as! [String]
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {

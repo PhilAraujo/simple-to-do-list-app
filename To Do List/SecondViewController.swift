@@ -22,6 +22,9 @@ class SecondViewController: UIViewController {
         // this will clear itemTextField.text which will let the user add another item to the list
         itemTextField.text = ""
         
+        // this will update NSUserDefaults with the array the user entered, storing it permanently. set the .setObject and forKey as toDo since we want to store the toDo list items permanently
+        NSUserDefaults.standardUserDefaults().setObject(toDo, forKey: "toDo")
+        
         }
     
 
