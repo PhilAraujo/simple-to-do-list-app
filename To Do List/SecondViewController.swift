@@ -34,7 +34,25 @@ class SecondViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
+    // this snippet will allow the user to close the keyboard if they tap anywhere else on the screen that isn't the text field
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+        self.view.endEditing(true)
+        
+    }
 
+    
+    
+    // use textFieldShouldReturn and resignFirst Responder() to let the user tap the return button to close the keyboard. Returning this as true will allow it to happen
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        
+        itemTextField.resignFirstResponder()
+        return true
+        
+    }
 
 }
 
