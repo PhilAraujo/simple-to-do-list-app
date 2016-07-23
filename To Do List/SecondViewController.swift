@@ -9,6 +9,21 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
+    
+    @IBOutlet var itemTextField: UITextField!
+    
+    
+    
+    @IBAction func addItemButton(sender: AnyObject) {
+        // this snippet of code will add what the user enters into the text field to the array of strings that was defined outside the class in the first view controller
+        toDo.append(itemTextField.text!)
+        
+        // this will clear itemTextField.text which will let the user add another item to the list
+        itemTextField.text = ""
+        
+        }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

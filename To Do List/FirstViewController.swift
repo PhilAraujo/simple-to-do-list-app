@@ -8,7 +8,14 @@
 
 import UIKit
 
+// here I am creating a global variable that represents the to do list. it must be created outside the class so it can be accessed from the second view controller as well
+var toDo = [String]()
+
 class FirstViewController: UIViewController {
+    
+    
+    @IBOutlet var toDoTable: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

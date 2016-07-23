@@ -24,7 +24,7 @@
                                     <navigationItem title="Title" id="OsU-fn-CXC"/>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GeZ-qf-NB0">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rSD-2z-5b3">
                                 <rect key="frame" x="-4" y="64" width="383" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -32,16 +32,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pqm-rM-eYp" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="2zO-3Q-3pr"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="GeZ-qf-NB0" secondAttribute="bottom" id="Gcg-IV-OBo"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GeZ-qf-NB0" secondAttribute="trailing" constant="-20" id="Sxy-WJ-inW"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="rSD-2z-5b3" secondAttribute="bottom" id="KbK-R1-qbX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pqm-rM-eYp" secondAttribute="trailing" constant="-20" id="UzG-v0-F3I"/>
-                            <constraint firstItem="GeZ-qf-NB0" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="dbi-26-3mw"/>
+                            <constraint firstItem="rSD-2z-5b3" firstAttribute="top" secondItem="pqm-rM-eYp" secondAttribute="bottom" id="mE7-u4-s7r"/>
                             <constraint firstItem="pqm-rM-eYp" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="poL-jg-uPE"/>
-                            <constraint firstItem="GeZ-qf-NB0" firstAttribute="top" secondItem="pqm-rM-eYp" secondAttribute="bottom" id="u8q-gk-wXy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rSD-2z-5b3" secondAttribute="trailing" constant="-20" id="rSA-hk-6tc"/>
+                            <constraint firstItem="rSD-2z-5b3" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="vrc-Lz-b9K"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="toDoTable" destination="rSD-2z-5b3" id="Dvl-AA-pr6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -84,6 +87,9 @@
                                     <constraint firstAttribute="width" constant="30" id="pFn-hA-SeF"/>
                                 </constraints>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addItemButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="S5u-Sh-Uvg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -101,6 +107,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="itemTextField" destination="dhJ-Hq-lO9" id="UIX-Bd-u1X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
